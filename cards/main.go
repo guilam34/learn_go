@@ -5,11 +5,13 @@ import (
 )
 
 func main() {
-	// type declaration isn't needed since variable assignment infers type
-	// var card = "Ace of Spades"
-	card := newCard()
+	// Slice
+	cards := []string{"Ace of Diamonds", newCard()}
+	cards = append(cards, "Six of Spades")
 
-	fmt.Println(card)
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
 }
 
 func newCard() string {
