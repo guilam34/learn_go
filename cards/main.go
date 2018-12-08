@@ -1,10 +1,11 @@
 package main
 
 func main() {
-	// Slice
 	cards := newDeck()
+	hand, remainingCards := deal(cards, 5)
 
-	cards.print()
+	hand.print()
+	remainingCards.print()
 }
 
 func newCard() string {
