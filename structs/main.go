@@ -25,8 +25,8 @@ func main() {
 		},
 	}
 
-	jimPointer := &jim
-	jimPointer.updateName("Jimmy")
+	// Shortcut to convert object reference to pointer
+	jim.updateName("Jimmy")
 	jim.print()
 }
 
