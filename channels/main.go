@@ -20,8 +20,9 @@ func main() {
 		go checkLink(link, c)
 	}
 
-	// blocking call, waits for first message sent to channel
-	fmt.Println(<-c)
+	for i := 0; i < len(links); i++ {
+		fmt.Println(<-c)
+	}
 }
 
 func checkLink(link string, c chan string) {
